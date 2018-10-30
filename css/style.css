@@ -672,6 +672,9 @@ h6 {
 section.header .ui.button {
   margin-top: 0 !important;
 }
+section.header .ui.button a {
+  color: white !important;
+}
 section.header .ui.button.heart,
 section.header .ui.button.user {
   position: relative;
