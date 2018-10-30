@@ -64,6 +64,7 @@
   overflow: auto;
 }
 .details.ui.container.fluid .flex-wrapper .image-others div {
+  background: #F2F2ED;
   margin-right: 1rem;
   border-radius: 15px;
   cursor: pointer;
@@ -749,7 +750,7 @@ section.header .ui.button.user.outline:after {
 }
 .ui.cards.container .ui.card .card-header {
   padding-top: 0.5rem !important;
-  margin: .75em 1em !important;
+  margin: 0.75em 1em !important;
 }
 .ui.cards.container .ui.card .ui.header {
   border-bottom: 0 !important;
