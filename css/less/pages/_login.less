@@ -1,0 +1,52 @@
+main.login {
+    .background-primary !important;
+    display: flex !important;
+    height: 100% !important;
+    
+    
+    > .ui.container {
+        .padding-big !important;
+        background: white !important;
+        border-radius: 10px;
+        display: flex !important;
+        margin: auto !important;
+        min-height: 45vh !important;
+        width: 50% !important;
+        
+        .ui.form {
+            .fade-in-and-up;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: all 250ms ease-in-out;
+            
+            input {
+                transition: all 250ms ease-in-out;
+            }
+            
+            label {
+                font-size: 1.2rem;
+                .margin-bottom-medium;
+            }
+        }
+        
+        label {
+            &:first-letter {
+                .color-primary;
+            }
+        }
+    }
+}
+
+main.ui.fluid.container.login section.main {
+    min-height: 45vh !important;
+    position: relative !important;
+    
+    .that-house {
+        .fade-in-and-down;
+        color: white !important;
+        position: absolute;
+        top: -4rem;
+    }
+}
+

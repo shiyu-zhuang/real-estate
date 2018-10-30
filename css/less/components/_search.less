@@ -1,0 +1,48 @@
+.ui.icon.input>input {
+    border-color: @secondaryColor !important;
+    transition: border-color 250ms ease-in-out !important;
+
+    &:focus {
+        border-color: darken(@secondaryColor, 2%) !important;
+    }
+}
+
+.ui.search {
+    .results {
+            max-height: 22rem;
+            overflow-y: scroll;
+
+        .result .content {
+            margin: 0;
+        }
+    }
+
+    input.prompt {
+        border-radius: 5px !important;
+    }
+}
+
+.ui.search  {
+  .results {
+      //display: block !important;
+      border: none !important;
+      box-shadow: none !important;
+      overflow: auto !important;
+      .result {
+        border-left: 1px solid @secondaryColor !important;
+        border-right: 1px solid @secondaryColor !important;
+
+        &:first-of-type {
+          border-top: 1px solid @secondaryColor !important;
+        }
+
+        &:last-of-type {
+          border-bottom: 1px solid @secondaryColor !important;
+        }
+      }
+  }
+
+  .message.empty{
+    display: none !important;
+  }
+}

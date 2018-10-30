@@ -1,0 +1,23 @@
+.ui.selection.dropdown {
+    background: #F7F7F4 !important;
+    border: 0 !important;
+    transition: background 250ms ease-in-out !important;
+    
+    &:hover, &:focus {
+        background: darken(@secondaryColor, 2%) !important;
+    }
+    
+    &.active .menu {
+        background: #F7F7F4 !important;
+        border-color: #F7F7F4 !important;
+    }
+    
+}
+
+.ui.dropdown .menu>.item {
+    transition: background 200ms ease-in-out !important;
+    
+    &:hover {
+        background: darken(@secondaryColor, 2%) !important;
+    }
+}

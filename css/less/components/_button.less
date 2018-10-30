@@ -1,0 +1,200 @@
+/*Buttons*/
+.ui.button {
+    .background-primary !important;
+    .color-white !important;
+    .margin-top-big !important;
+    transition: all 250ms ease-in-out;
+    
+    &:hover {
+        background: darken(@primaryColor, 4%) !important;
+    }
+
+    
+    &.icon {
+            background: transparent !important;
+            color: @grey !important;
+            margin-top: 0 !important;
+            margin-left: auto !important;
+            transition: color 250ms ease-in-out;
+            width: 3rem !important; 
+        
+        i:before {
+            transition: color 250ms ease-in-out;
+        }
+        
+        &.left, &.right {
+            
+            &:hover i:before {
+                .color-primary !important;
+            }
+            
+        }
+        
+        &.heart {
+            padding: 0 !important;
+            text-align: right;
+            transition: all 250ms ease-in-out !important;
+            
+            //when the heart is clicked, give the button a classname of loved
+            &.loved {                
+                .icon.heart:before {
+                    color: @primaryColor !important;
+                    
+                }
+            }
+            
+            .icon.heart {
+                &:before {
+                    .color-grey !important;
+                    transition: all 250ms ease-in-out !important;
+                }
+            }  
+
+            &:hover {
+                transform: translateY(-0.2rem) !important;
+            }
+        }
+        
+        &.chat {
+            padding: 0 !important;
+            transition: all 250ms ease-in-out !important;
+            
+            .icon:before {
+                transition: all 250ms ease-in-out !important;
+            }
+            
+            &:hover {
+                transform: translateY(-0.2rem) !important;
+                
+                .icon:before {
+                    color: @primaryColor !important;
+                }
+            }
+        }
+        
+        &.to-top {
+            .background-primary !important;
+            border-radius: 50%;
+            font-size: 1.7rem !important;
+            height: 3rem !important;
+            width: 3rem !important;
+            padding: 0 !important;
+            position: fixed;
+            transition: all 250ms ease-in-out;
+            top: 86vh;
+            right: 0.5rem;
+            
+            i:before {
+                .color-white !important;
+            }
+            
+            &:hover {
+                background: darken(@primaryColor, 4%) !important;
+                transform: translateY(-0.3rem);
+            }
+        }
+        
+        &.user {            
+            i:before {
+                color: white !important;
+            }
+            
+            &:hover {                
+                i:before {
+                    color: white !important;
+                }
+            }
+        }
+    }
+    
+    &.basic {
+        box-shadow: none !important;
+        font-weight: 600 !important;
+        
+        &.right.floated {
+            .color-dark !important;
+            transition: color 250ms ease-in-out !important;
+            
+            &:hover {
+                .color-primary !important;
+            }
+        }
+    }
+}
+
+section.header .ui.button {
+    margin-top: 0 !important;
+    
+    &.heart, &.user {
+        position: relative;
+        transition: all 200ms ease-in-out;
+        width: 2.3rem !important;
+        
+        &:after {
+            font-size: 0.75rem;
+            color: white !important;
+            position: absolute;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+        }
+        
+        &:hover {
+            transform: translateY(-0.3rem) !important;
+            
+            &:after {
+                opacity: 1;
+                height: 1rem;                
+            }
+        }
+    }
+    
+    &.heart {
+        margin: 0 1.5rem 0 0 !important;
+        &:after {
+            content: "loves";
+            bottom: 0.1rem;
+            left: 0.6rem;
+        }
+    }
+    
+    &.user {
+        float: right;
+        height: 100% !important;
+        
+        &:after {
+            content: "customer";
+            bottom: 0rem;
+            left: -0.3rem;
+        }
+        
+        &.outline {
+            &:after {
+                content: "agent";
+                left: 0.35rem;
+            }
+        }
+    }
+}
+
+//close button
+.ui.button.close {
+    .background-white !important;
+    font-size: 2rem;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    h1 {
+        .color-dark !important;
+        border: none !important;
+        transition: color 250ms ease-in-out;
+    }
+    
+    &:hover {
+        h1 {
+            .color-primary !important;
+        }
+    }
+}

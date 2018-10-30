@@ -1,0 +1,73 @@
+*,
+*:before,
+*:after {
+    .color-dark !important;
+    box-sizing: border-box;
+}
+header, div, p {
+    line-height: 1.75 !important;
+}
+
+/*Header*/
+.ui.header {
+    border-bottom: 1px solid @colorDark !important;
+    margin: 0 auto !important;
+    text-align: center;
+    width: 50%;
+    min-width: max-content;
+
+    .red {
+        .color-primary !important;
+    }
+}
+
+/*Container*/
+main.ui.fluid.container {
+    height: 100vh;
+
+    section {
+
+        /*Site Header*/
+        &.header {
+            .background-primary !important;
+            .margin-bottom-large;
+            height: 3.5rem;
+
+            .ui.icon.heart {
+                float: right;
+                height: 100% !important;
+
+                &:hover i:before, i:before {
+                    .color-white !important;
+                }
+            }
+        }
+
+        /*Site Footer*/
+        &.footer {
+            .background-secondary !important;
+            height: 8vh;
+            text-align: center;
+
+        }
+
+        /*Site Main*/
+        &.main {
+            min-height: calc(~"100% - 3rem - 8vh") !important;
+            position: relative;
+        }
+
+        .content {
+            .margin-bottom-large;
+            .margin-top-large;
+
+            .ui.container.wrapper {
+                margin-bottom: 8rem !important;
+
+                > .ui.header {
+                    .margin-bottom-large !important;
+                }
+            }
+        }
+    }
+}

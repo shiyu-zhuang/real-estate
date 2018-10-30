@@ -1,0 +1,33 @@
+.fancybox-button {    
+    svg path {
+        fill: white !important;
+    }
+    
+    background: transparent !important;
+}
+
+
+img.fancybox-image {
+    border-radius: 10px;
+    transform: translateY(0%);
+}
+
+.fancybox-toolbar .fancybox-button, 
+.fancybox-navigation .fancybox-button div{
+    .background-primary !important;
+    border-radius: 5px !important;
+    transition: all 250ms ease-in-out;
+    
+    &:hover {
+        background: darken(@primaryColor, 4%) !important;
+    }
+}
+
+.fancybox-toolbar .fancybox-button {
+    .margin-left-small !important;
+}
+
+.fancybox-bg {
+    .background-secondary !important;
+    opacity: 0.6;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Realtor.ca">
+    <title> </title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+</head>
+
+<body>
+    <main class="home ui container fluid" name="top">
+        <!--header-->
+        <section class="header">
+            <div class="ui list horizontal">
+                <div class="item">
+                    <div class="ui button simple">Home</div>
+                </div>
+            </div>
+            <button class="ui icon button heart floated right"> <a href="loved.html"><i class="heart icon"></i></a> </button>
+            <button class="ui icon button user floated right"> <a href="/"><i class="user icon"></i></a> </button>
+            <button class="ui icon button user outline floated right"> <a href="login.html"><i class="user outline icon"></i></a> </button>
+        </section>
+        <!--main area-->
+        <section class="main">
+            <!--top part-->
+            <div class="ui container">
+                <!--filters-->
+                <form action="/list" method="post">
+                    <div class="filters ui grid ">
+                        <div class="ui sixteen wide column">
+                            <!--search-->
+                            <div class="ui search">
+                                <div class="ui icon input container fluid">
+                                    <input class="prompt" type="text" name="text" placeholder="Search cities, house types, etc."> <i class="search icon"></i> </div>
+                                <div class="results"></div>
+                            </div>
+                            <!--slider-->
+                            <!-- <div class="slider ui eight wide column">
+                            <input type="range" min="1" max="999,999,999" value="350,000" id="myRange" class="container fluid ui">
+                            <div class="slider-values">
+                                <span>Value 1</span>
+                                <span>Value 2</span>
+                            </div>
+                        </div> -->
+                            <!--buttons-->
+                        </div>
+                        <div class="four wide column">
+                            <div class="ui selection dropdown column container">
+                                <input type="hidden" name="lower_price"> <i class="dropdown icon"></i>
+                                <div class="default text">Lower Price</div>
+                                <div class="menu">
+                                    <div class="item" data-value="0">0</div>
+                                    <div class="item" data-value="25000">25K</div>
+                                    <div class="item" data-value="50000">50K</div>
+                                    <div class="item" data-value="75000">75K</div>
+                                    <div class="item" data-value="100000">100K</div>
+                                    <div class="item" data-value="150000">150K</div>
+                                    <div class="item" data-value="200000">200K</div>
+                                    <div class="item" data-value="250000">250K</div>
+                                    <div class="item" data-value="300000">300K</div>
+                                    <div class="item" data-value="350000">350K</div>
+                                    <div class="item" data-value="400000">400K</div>
+                                    <div class="item" data-value="450000">450K</div>
+                                    <div class="item" data-value="500000">500K</div>
+                                    <div class="item" data-value="550000">550K</div>
+                                    <div class="item" data-value="600000">600K</div>
+                                    <div class="item" data-value="650000">650K</div>
+                                    <div class="item" data-value="700000">700K</div>
+                                    <div class="item" data-value="750000">750K</div>
+                                    <div class="item" data-value="800000">800K</div>
+                                    <div class="item" data-value="850000">850K</div>
+                                    <div class="item" data-value="900000">900K</div>
+                                    <div class="item" data-value="950000">950K</div>
+                                    <div class="item" data-value="1000000">1M</div>
+                                    <div class="item" data-value="1100000">1.1M</div>
+                                    <div class="item" data-value="1200000">1.2M</div>
+                                    <div class="item" data-value="1300000">1.3M</div>
+                                    <div class="item" data-value="1400000">1.4M</div>
+                                    <div class="item" data-value="1500000">1.5M</div>
+                                    <div class="item" data-value="1600000">1.6M</div>
+                                    <div class="item" data-value="1700000">1.7M</div>
+                                    <div class="item" data-value="1800000">1.8M</div>
+                                    <div class="item" data-value="1900000">1.9M</div>
+                                    <div class="item" data-value="2000000">2M</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four wide column">
+                            <div class="ui selection dropdown column container">
+                                <input type="hidden" name="upper_price"> <i class="dropdown icon"></i>
+                                <div class="default text">Upper Price</div>
+                                <div class="menu">
+                                    <div class="item" data-value="0">0</div>
+                                    <div class="item" data-value="25000">25K</div>
+                                    <div class="item" data-value="50000">50K</div>
+                                    <div class="item" data-value="75000">75K</div>
+                                    <div class="item" data-value="100000">100K</div>
+                                    <div class="item" data-value="150000">150K</div>
+                                    <div class="item" data-value="200000">200K</div>
+                                    <div class="item" data-value="250000">250K</div>
+                                    <div class="item" data-value="300000">300K</div>
+                                    <div class="item" data-value="350000">350K</div>
+                                    <div class="item" data-value="400000">400K</div>
+                                    <div class="item" data-value="450000">450K</div>
+                                    <div class="item" data-value="500000">500K</div>
+                                    <div class="item" data-value="550000">550K</div>
+                                    <div class="item" data-value="600000">600K</div>
+                                    <div class="item" data-value="650000">650K</div>
+                                    <div class="item" data-value="700000">700K</div>
+                                    <div class="item" data-value="750000">750K</div>
+                                    <div class="item" data-value="800000">800K</div>
+                                    <div class="item" data-value="850000">850K</div>
+                                    <div class="item" data-value="900000">900K</div>
+                                    <div class="item" data-value="950000">950K</div>
+                                    <div class="item" data-value="1000000">1M</div>
+                                    <div class="item" data-value="1100000">1.1M</div>
+                                    <div class="item" data-value="1200000">1.2M</div>
+                                    <div class="item" data-value="1300000">1.3M</div>
+                                    <div class="item" data-value="1400000">1.4M</div>
+                                    <div class="item" data-value="1500000">1.5M</div>
+                                    <div class="item" data-value="1600000">1.6M</div>
+                                    <div class="item" data-value="1700000">1.7M</div>
+                                    <div class="item" data-value="1800000">1.8M</div>
+                                    <div class="item" data-value="1900000">1.9M</div>
+                                    <div class="item" data-value="2000000">2M</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four wide column">
+                            <div class="ui selection dropdown column container">
+                                <input type="hidden" name="built_in"> <i class="dropdown icon"></i>
+                                <div class="default text">Year Built Range</div>
+                                <div class="menu">
+                                    <div class="item" data-value="any">Any</div>
+                                    <div class="item" data-value="-1960">Before 1960</div>
+                                    <div class="item" data-value="1961-1970">1961-1970</div>
+                                    <div class="item" data-value="1971-1980">1971-1980</div>
+                                    <div class="item" data-value="1981-1990">1981-1990</div>
+                                    <div class="item" data-value="1991-2000">1991-2000</div>
+                                    <div class="item" data-value="2001-2005">2001-2005</div>
+                                    <div class="item" data-value="2006-2010">2006-2010</div>
+                                    <div class="item" data-value="2011-2015">2011-2015</div>
+                                    <div class="item" data-value="2015-">After 2015</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four wide column">
+                            <div class="ui selection dropdown column container">
+                                <input type="hidden" name="bedrooms"> <i class="dropdown icon"></i>
+                                <div class="default text">Number of Bedrooms</div>
+                                <div class="menu">
+                                    <div class="item" data-value="any">Any</div>
+                                    <div class="item" data-value="0">0</div>
+                                    <div class="item" data-value="1">1</div>
+                                    <div class="item" data-value="1+">1+</div>
+                                    <div class="item" data-value="2">2</div>
+                                    <div class="item" data-value="2+">2+</div>
+                                    <div class="item" data-value="3">3</div>
+                                    <div class="item" data-value="3+">3+</div>
+                                    <div class="item" data-value="4">4</div>
+                                    <div class="item" data-value="4+">4+</div>
+                                    <div class="item" data-value="5">5</div>
+                                    <div class="item" data-value="5+">5+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui button-group list horizontal container fluid">
+                            <button type="submit" class="ui button right floated">Search</button>
+                            <button type="reset" class="ui button basic right floated">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--content-->
+            <div class="content">
+                <div class="ui container wrapper">
+                    <h2 class="ui header">You <span class="red">May Like</span></h2>
+                    <!--cards: you may like-->
+                    <div class="ui four cards container">
+                        <!--******This needs to be replaced by the right cards******-->
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                        <div class="ui card">
+                            <div class="card-header">
+                                <button class="ui icon button heart right floated"> <i class="heart icon"></i> </button>
+                                <h3 class="ui header">$450,000</h3>
+                                <p><span>12</span> likes</p>
+                            </div>
+                            <a class="image" href="details.html"></a>
+                            <div class="extra">
+                                <div>This is an address placeholder</div>
+                                <h4 class="ui header">Condo</h4>
+                                <div> <span><i class="icon home"></i>2001</span> <span><i class="icon calendar alternate outline"></i>2 days</span> <span><i class="icon bed"></i>3</span> <span><i class="icon bath"></i>3</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="ui button icon to-top" id="to-top"><i class="chevron up icon"></i></div>
+        <!--footer-->
+        <section class="footer"></section>
+    </main>
+</body>
+<script>
+    $(function () {
+        $('.ui.container.cards').each(function (i, el) {
+            if ($(this).find('.ui.card').length == 0) {
+                $(this).html('<div>no items...</div>');
+                $(this).addClass("empty-message");
+            }
+        });
+    });
+    $(document).ready(function () {
+            $('.ui.dropdown').dropdown();
+        })
+        //Scroll to Top
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 100) {
+            $('#to-top').addClass("opacity-1").removeClass("opacity-0");
+        }
+        else {
+            $('#to-top').addClass("opacity-0").removeClass("opacity-1");
+        }
+    });
+    $('#to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+    });
+</script>
+
+</html>

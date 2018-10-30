@@ -1,0 +1,61 @@
+/*Card*/
+
+.ui.cards.container {  
+    .fade-in-and-up;
+    
+    .ui.card  {      
+        box-shadow: 0 1px 3px 0 @secondaryColor, 0 0 0 1px @secondaryColor !important;
+        transition: all 250ms ease-in-out;
+        
+        &:hover {
+            box-shadow: 0 0 10px 4px #EFF1F2 !important;
+            transform: translateY(-2px);
+        }
+        
+        .card-header {
+            .padding-top-small !important;
+            margin: .75em 1em !important;
+        }
+
+        .ui.header {
+            border-bottom: 0 !important; 
+            margin: 0 !important;
+            text-align: left;
+            width: 100%;
+        }
+
+        .extra {     
+            padding-bottom: 1.5rem !important;
+            
+            .ui.header {
+                .margin-bottom-medium !important;
+                .margin-top-medium !important;
+            }    
+
+            div:last-child {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+main.ui.fluid.container {
+    &.details {
+        .ui.cards {
+            overflow:auto;
+        }
+    }
+    
+    &.details.ui.container.fluid .ui.container.wrapper .ui.cards.container {
+        height: 28rem !important;
+    }
+}
+
+
+//card image 
+.ui.card>.image, .ui.cards>.card>.image {
+    height: 10.5rem !important; 
+    overflow: hidden;
+    width: 100% !important;   
+}
